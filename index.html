@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type='text/javascript' src='./jquery-3.3.1.min.js'></script>
+    <script type='text/javascript' src='./jquery.particleground.min.js'></script>
+    <script type='text/javascript' src='./jquery.fullPage.js'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./mine.css" />
+    <title>ABOUT ME</title>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section" id="head">
+				<h1>test</h1>
+			</div>
+      <div class="section " id="section0"><h1>0</h1></div>
+      <div class="section" id="section1"><h1>1</h1></div>
+      <div class="section" id="section2"><h1>2</h1></div>
+      <div class="section" id="section3"><h1>3</h1></div>
+    </div>
+    <div id="fp-nav" class="right" style="margin-top: -43.5px;">
+      <ul></ul>
+    </div>
+    <div id="particles"></div>
+    
+  </body>
+</html>
+    <script>
+      $(document).ready(function() {
+        $('#fullpage').fullpage({
+          verticalCentered: false,
+
+          //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
+          'css3':false,
+          'sectionsColor': ['', '#1bbc9b', '#7BAABE', '', '#ccddff'],
+          'navigation': true,
+          'navigationPosition': 'right',
+          'navigationTooltips': ['1', '2', '3', '4', '5'],
+        });
+      });
+      $('#particles').particleground({
+          dotColor: '#FFF',
+          lineColor: '#FFF',
+          density: 50000,
+          directionX: 'right',
+          directionY: 'down',
+          proximity: 200
+      });
+    </script>

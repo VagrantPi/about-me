@@ -1,0 +1,94 @@
+body{
+  background: #ededee;
+}
+#particles{
+  z-index:-1;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+    
+
+/* Style for our header texts
+* --------------------------------------- */
+h1{
+  font-size: 5em;
+  font-family: arial,helvetica;
+  color: rgb(3, 0, 0);
+  margin:0;
+  padding:0;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+  text-align:center;
+}
+
+
+/* Backgrounds will cover all the section
+* --------------------------------------- */
+#section0,
+#section1,
+#section2,
+#section3{
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#text-section {
+  text-align:center;
+  height: 300px;
+}
+
+/* Defining each sectino background and styles
+* --------------------------------------- */
+#section0{
+  /* background-image: url(./1.jpg); */
+}
+#section0 h1{
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+#section2{
+  /* background-image: url(./2.jpg); */
+  padding: 6% 0 0 0;
+}
+#section3{
+  /* background-image: url(./3.jpg); */
+  padding: 6% 0 0 0;
+}
+#section3 h1{
+  color: #000;
+}
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+  color: rgb(0, 0, 0);
+}
+
+
+
+/* --------------------------------------- */
+/* --------------------------------------- */
+/* --------------------------------------- */
+/* --------------------------------------- */
+
+
+
+
+/* Overwriting fullPage.js tooltip color
+* --------------------------------------- */
+.fp-tooltip{
+  color: #AAA;
+}
+#fp-nav span, .fp-slidesNav span{
+  border-color: #AAA;
+}
+#fp-nav li .active span, .fp-slidesNav .active span{
+  background: #AAA;
+}
