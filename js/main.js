@@ -168,7 +168,7 @@
 							},  k * 1000, 'easeInOutExpo' );
 							
 						});
-					}, 6000);
+					}, 5000);
 
 					
 					$(this.element).addClass('animated');
@@ -438,7 +438,6 @@
 	// mine js
 
 	var typeFont = function() {
-		var typeInt = 0;
 		var theater = theaterJS()
 		
 		theater
@@ -453,23 +452,19 @@
 				actor.$element.classList.remove('is-typing')
 			})
 			.on('type:end', function () {
-				typeInt+=1;
-				if(typeInt===2) {
-					$('#typeHello').animate({
-						"opacity":"0",
-						"display":"none",
-					}, 1500).hide(function(){
-						//
-					})
-				}
+				$('#typeHello').animate({
+					"opacity":"0",
+					"display":"none",
+				}, 2000).hide(function(){
+					//
+				})
 			})
 		
 		theater
 			.addActor('typeHello', { speed: 1 })
 			
 		theater
-			.addScene('typeHello:Hi! I\'m VagrantPi' , 1000)
-			.addScene('typeHello:＼＼\\٩( \'ω\' )و //／／')
+			.addScene('typeHello:Hi! I\'m VagrantPi', 1000)
 	}
 
 	
