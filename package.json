@@ -1,0 +1,25 @@
+{
+  "name": "about-me",
+  "version": "1.0.0",
+  "description": "個人經歷網頁",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node-sass --include-path scss sass/mine.scss css/mine.css",
+    "watch": "nodemon -e scss -x \"npm run build\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VagrantPi/about-me.git"
+  },
+  "author": "VagrantPi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VagrantPi/about-me/issues"
+  },
+  "homepage": "https://github.com/VagrantPi/about-me#readme",
+  "dependencies": {
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.17.1"
+  }
+}
