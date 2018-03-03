@@ -236,7 +236,6 @@
 		}
 	};
 
-
 	var testimonialAnimate = function() {
 		var testimonial = $('#fh5co-testimonials');
 		if ( testimonial.length > 0 ) {	
@@ -405,7 +404,6 @@
 		}
 	};
 
-
 	var contactAnimate = function() {
 		var contact = $('#fh5co-contact');
 		if ( contact.length > 0 ) {	
@@ -433,8 +431,6 @@
 		}
 	};
 
-
-	
 	// mine js
 
 	var typeFont = function() {
@@ -467,7 +463,63 @@
 			.addScene('typeHello:Hi! I\'m VagrantPi', 1000)
 	}
 
-	
+	var myMasonry = function() {
+		$('.grid').imagesLoaded(function () {
+			$('.grid').masonry({        
+				itemSelector: '.grid-item',
+				animate: true
+			});
+		});
+	}
+
+	var chartLineBar = function() {
+		new Chart(document.getElementById("bar-chart-horizontal"), {
+        type: 'horizontalBar',
+        data: {
+          labels: ["JavaScript", "Vue.js", "Node.js(sails, express)"],
+          datasets: [
+            {
+              label: "熟悉程度",
+              backgroundColor: ["#f2e84c", "#00c984", "#43d214"],
+              data: [60,60,50],
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                if (label) {
+                    label += ': ';
+                }
+                label += Math.round(tooltipItem.xLabel * 100) / 100;
+                return label + '%';
+              }
+            }
+          },
+          scales: {
+            xAxes: [{
+              ticks: {
+                beginAtZero:true,
+                max: 100,
+                min: 0,
+                callback: function(value, index, values) {
+                  return value + '%';
+                },
+              },
+            }]
+          },
+					plugins: {
+						deferred: {
+							xOffset: '20%',
+							delay: 1000
+						}
+					}
+        }
+    });
+	}
 	
 
 	// Document on load.
@@ -496,7 +548,10 @@
 		countersAnimate();
 		contactAnimate();
 
-		typeFont()
+		typeFont();
+		
+		myMasonry();
+		chartLineBar();
 		
 
 	});

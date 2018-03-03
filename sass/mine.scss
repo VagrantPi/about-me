@@ -36,3 +36,86 @@
   box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
   z-index: 7;
 }
+.experience-line {
+  position: relative;
+  height: 100%;
+}
+.experience-line::before {
+  content: "";
+  background-image: url(https://image.flaticon.com/icons/svg/321/321805.svg);
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(-135deg);
+  top: 400px;
+}
+.experience-line::after {
+  content: "";
+  width: 10px;
+  background: linear-gradient(to top,yellow,red);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  height: 400px;
+}
+.experience-item {
+  background: white;
+  color: black;
+  list-style-type: none;
+  border-radius: 10px;
+  padding-left: 80px;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 20px; 
+  box-shadow: 0px 0px;
+  border: 3px solid #e8edec;
+  height: 130px;
+  .experience-type {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 45px;
+  }
+  .experience-company {
+    position: absolute;
+    left: 150px;
+    top: 10px;
+    font-weight: 500;
+  }
+  .experience-time {
+    position: absolute;
+    top: 40px;
+    left: 150px;
+    font-size: 12px;
+    color: darkgray;
+  }
+  .experience-content {
+    position: absolute;
+    top: 72px;
+    left: 150px;
+    font-size: 16px;
+  }
+}
+.experience-item::before {
+    content: "";
+    width: 5px;
+    height: 91%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 3px solid #e8edec;
+    left: 130px;
+  }
+.experience-item:hover {
+	animation-name: myfloat;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+@keyframes myfloat {
+    0%   { left:0px; top:0px; }
+    10%  { left:-2px; top: -10px; box-shadow: 6px 5px 8px 5px rgba(0, 0, 0, 0.4);}
+    100%  { left:-2px; top: -10px; box-shadow: 6px 5px 8px 5px rgba(0, 0, 0, 0.4);}
+}
