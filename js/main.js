@@ -498,13 +498,13 @@
 										label = [label, "略懂 ES6，不過很多 Method 都沒記下來，某些情況下還是需要翻翻文件"]
 										break;
 									case 1:
-										label = [label, "實習時用了不少XD，雖然實習的公司主打 RN，不過還是覺得 Vue 好玩"]
+										label = [label, "實習時用了不少，雖然實習的公司主打 RN，不過還是覺得 Vue 好玩"]
 										break;
 									case 2:
 										label = [label, "之前實習時，公司主要是使用 Sails，另外也因為些小專案的關係也玩過 Express"]
 										break;
 									case 3:
-										label = [label, "Git 還算熟，不過比較奇葩的指令，就不是很懂啦XD(比如rebase 什麼的)"]
+										label = [label, "Git 還算熟，不過有些指令工作時不怎麼用到，比較不熟悉，比如 rebase 之類的"]
 										break;
 									case 4:
 										label = [label, "只用過 mocha，寫過的測試大概只有數百行而已，主要是比較複雜的邏輯才會寫，不過在實習時開發流程有時是 TDD，所也看過不少寫法跟spec"]
@@ -538,7 +538,7 @@
 						display: true,
 						fontSize: 16,
 						fontFamily: "微軟正黑體, Source Sans Pro, Arial, sans-serif",
-						text: 'TIPS: 滑鼠移到長條圖上方會有而外說明 d(`･∀･)b'
+						text: 'TIPS: 滑鼠移到長條圖上方會有而外說明'
 					}
         }
     });
