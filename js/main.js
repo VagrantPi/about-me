@@ -168,7 +168,7 @@
 							},  k * 1000, 'easeInOutExpo' );
 							
 						});
-					}, 5000);
+					}, 3500);
 
 					
 					$(this.element).addClass('animated');
@@ -392,10 +392,6 @@
 						});
 					}, sec);
 
-					
-
-					
-
 					$(this.element).addClass('animated');
 						
 				}
@@ -448,11 +444,11 @@
 				actor.$element.classList.remove('is-typing')
 			})
 			.on('type:end', function () {
-				$('#typeHello').animate({
+				$('#typeHello').delay(500).animate({
 					"opacity":"0",
 					"display":"none",
-				}, 2000).hide(function(){
-					//
+				}, 1000, function() {
+					$('#typeHello').hide()
 				})
 			})
 		
