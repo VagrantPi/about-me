@@ -1,15 +1,24 @@
 #typeHello {
   font-size: 80px;
   font-weight: 500;
+  @media (max-width: 680px) {
+    font-size: 40px;
+  }
+  @media (max-width: 320px) {
+    font-size: 30px;
+  }
 }
 .img-wrapper {
   width: 100%;
-  height: 350px;
+  height: 300px;
   border-radius: 5%;
   box-shadow: 12px 12px 20px rgba(0,0,0,0.5);
   overflow: hidden;
   #my-picture {
     width: 100%;
+  }  
+  @media (max-width: 992px) {
+    height: 200px;
   }
 }
 #fh5co-home .text-inner {
@@ -26,19 +35,21 @@
     height: 100%;
     background-position: 0 16%;
   }
-}
-@media (max-width: 768px) {
-  #fh5co-home .text-inner {
+  @media (max-width: 768px) {
     padding-top: 120px;
     .to-animate h2 {
       text-align: left;
-      font-size: 21px;
       line-height: 29px;
     }
     .img-wrapper {
       margin-bottom: 20px;
     }
-  }  
+  }
+  @media (max-width: 992px) {
+    .to-animate h2 {
+      font-size: 21px;
+    }
+  }
 }
 .watch-video {
   width: 100%;
@@ -64,30 +75,29 @@
 .experience-line {
   position: relative;
   height: 100%;
-}
-@media (min-width: 992px) {
-
-  .experience-line::before {
-    content: "";
-    background-image: url(https://image.flaticon.com/icons/svg/321/321805.svg);
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) rotate(-135deg);
-    // top: 400px;
-    animation: rocket 4s 1s both cubic-bezier(1, -0.14, 0.84, 0.99) infinite,
-  }
-  .experience-line::after {
-    content: "";
-    width: 10px;
-    background: linear-gradient(to top,yellow,red);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    animation: rocket-line 4s 1s both cubic-bezier(1, -0.14, 0.84, 0.99) infinite,
+  @media (min-width: 992px) {
+    &:before {
+      content: "";
+      background-image: url(https://image.flaticon.com/icons/svg/321/321805.svg);
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) rotate(-135deg);
+      // top: 400px;
+      animation: rocket 4s 1s both cubic-bezier(1, -0.14, 0.84, 0.99) infinite,
+    }
+    &:after {
+      content: "";
+      width: 10px;
+      background: linear-gradient(to top,yellow,red);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      animation: rocket-line 4s 1s both cubic-bezier(1, -0.14, 0.84, 0.99) infinite,
+    }
   }
 }
 .experience-item {
@@ -127,28 +137,29 @@
     left: 150px;
     font-size: 16px;
   }
-}
-@media (max-width: 474px) {
-  .experience-item {
+
+  @media (max-width: 474px) {
     height: 150px;
     .experience-company {
       font-size: 16px;
       -webkit-line-clamp: 1;
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     .experience-content {
       font-size: 13px;
     }
   }
-}
-@media (max-width: 325px) {
-  .experience-item {
-    height: 250px;
+  @media (max-width: 325px) {
+    height: 190px;
   }
-}
-.experience-item::before {
+  &:hover {
+    animation-name: myfloat;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+  }
+  &:before {
     content: "";
     width: 5px;
     height: 91%;
@@ -158,10 +169,6 @@
     border-left: 3px solid #e8edec;
     left: 130px;
   }
-.experience-item:hover {
-	animation-name: myfloat;
-  animation-duration: 4s;
-  animation-fill-mode: both;
 }
 @keyframes myfloat {
   0%   { left:0px; top:0px; }
@@ -182,6 +189,10 @@
 .no-icon {
   margin-left: -30px !important;
   padding-left: 0 !important;
+  @media (max-width: 768px) {
+    margin-left: 0px !important;
+    padding-left: 0 !important;
+  }
 }
 .my-about {
   color: #fff;
@@ -197,6 +208,8 @@
 	background-color: transparent;
 	background-size: cover;
 	background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center !important;
 	position: relative;
 	width: 100%;
 	padding: 9em 0 10em 0;
@@ -227,9 +240,9 @@
 		margin-bottom: -35px;
 	}
 }
-#fh5co-bg {
-	padding: 7em 0;
-	@media screen and (max-width: 768px) {
-		padding: 4em 0;
-	}	
+canvas {
+  @media screen and (max-width: 425px) {
+    width: 85% !important;
+    left: 4%;
+  }
 }

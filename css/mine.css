@@ -1,15 +1,24 @@
 #typeHello {
   font-size: 80px;
   font-weight: 500; }
+  @media (max-width: 680px) {
+    #typeHello {
+      font-size: 40px; } }
+  @media (max-width: 320px) {
+    #typeHello {
+      font-size: 30px; } }
 
 .img-wrapper {
   width: 100%;
-  height: 350px;
+  height: 300px;
   border-radius: 5%;
   box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.5);
   overflow: hidden; }
   .img-wrapper #my-picture {
     width: 100%; }
+  @media (max-width: 992px) {
+    .img-wrapper {
+      height: 200px; } }
 
 #fh5co-home .text-inner {
   vertical-align: super;
@@ -23,16 +32,17 @@
     width: 100%;
     height: 100%;
     background-position: 0 16%; }
-
-@media (max-width: 768px) {
-  #fh5co-home .text-inner {
-    padding-top: 120px; }
+  @media (max-width: 768px) {
+    #fh5co-home .text-inner {
+      padding-top: 120px; }
+      #fh5co-home .text-inner .to-animate h2 {
+        text-align: left;
+        line-height: 29px; }
+      #fh5co-home .text-inner .img-wrapper {
+        margin-bottom: 20px; } }
+  @media (max-width: 992px) {
     #fh5co-home .text-inner .to-animate h2 {
-      text-align: left;
-      font-size: 21px;
-      line-height: 29px; }
-    #fh5co-home .text-inner .img-wrapper {
-      margin-bottom: 20px; } }
+      font-size: 21px; } }
 
 .watch-video {
   width: 100%;
@@ -57,27 +67,26 @@
 .experience-line {
   position: relative;
   height: 100%; }
-
-@media (min-width: 992px) {
-  .experience-line::before {
-    content: "";
-    background-image: url(https://image.flaticon.com/icons/svg/321/321805.svg);
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) rotate(-135deg);
-    animation: rocket 4s 1s both cubic-bezier(1, -0.14, 0.84, 0.99) infinite; }
-  .experience-line::after {
-    content: "";
-    width: 10px;
-    background: linear-gradient(to top, yellow, red);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    animation: rocket-line 4s 1s both cubic-bezier(1, -0.14, 0.84, 0.99) infinite; } }
+  @media (min-width: 992px) {
+    .experience-line:before {
+      content: "";
+      background-image: url(https://image.flaticon.com/icons/svg/321/321805.svg);
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) rotate(-135deg);
+      animation: rocket 4s 1s both cubic-bezier(1, -0.14, 0.84, 0.99) infinite; }
+    .experience-line:after {
+      content: "";
+      width: 10px;
+      background: linear-gradient(to top, yellow, red);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      animation: rocket-line 4s 1s both cubic-bezier(1, -0.14, 0.84, 0.99) infinite; } }
 
 .experience-item {
   background: white;
@@ -112,37 +121,33 @@
     top: 72px;
     left: 150px;
     font-size: 16px; }
-
-@media (max-width: 474px) {
-  .experience-item {
-    height: 150px; }
-    .experience-item .experience-company {
-      font-size: 16px;
-      -webkit-line-clamp: 1;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden; }
-    .experience-item .experience-content {
-      font-size: 13px; } }
-
-@media (max-width: 325px) {
-  .experience-item {
-    height: 250px; } }
-
-.experience-item::before {
-  content: "";
-  width: 5px;
-  height: 91%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border-left: 3px solid #e8edec;
-  left: 130px; }
-
-.experience-item:hover {
-  animation-name: myfloat;
-  animation-duration: 4s;
-  animation-fill-mode: both; }
+  @media (max-width: 474px) {
+    .experience-item {
+      height: 150px; }
+      .experience-item .experience-company {
+        font-size: 16px;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden; }
+      .experience-item .experience-content {
+        font-size: 13px; } }
+  @media (max-width: 325px) {
+    .experience-item {
+      height: 190px; } }
+  .experience-item:hover {
+    animation-name: myfloat;
+    animation-duration: 4s;
+    animation-fill-mode: both; }
+  .experience-item:before {
+    content: "";
+    width: 5px;
+    height: 91%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 3px solid #e8edec;
+    left: 130px; }
 
 @keyframes myfloat {
   0% {
@@ -175,6 +180,10 @@
 .no-icon {
   margin-left: -30px !important;
   padding-left: 0 !important; }
+  @media (max-width: 768px) {
+    .no-icon {
+      margin-left: 0px !important;
+      padding-left: 0 !important; } }
 
 .my-about {
   color: #fff;
@@ -190,6 +199,8 @@
   background-color: transparent;
   background-size: cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center !important;
   position: relative;
   width: 100%;
   padding: 9em 0 10em 0; }
@@ -217,8 +228,7 @@
     bottom: 0;
     margin-bottom: -35px; }
 
-#fh5co-bg {
-  padding: 7em 0; }
-  @media screen and (max-width: 768px) {
-    #fh5co-bg {
-      padding: 4em 0; } }
+@media screen and (max-width: 425px) {
+  canvas {
+    width: 85% !important;
+    left: 4%; } }
