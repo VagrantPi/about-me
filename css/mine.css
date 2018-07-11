@@ -104,7 +104,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 45px; }
+    left: 35px; }
   .experience-item .experience-company {
     position: absolute;
     left: 150px;
@@ -137,7 +137,7 @@
       height: 190px; } }
   .experience-item:hover {
     animation-name: myfloat;
-    animation-duration: 4s;
+    animation-duration: 5s;
     animation-fill-mode: both; }
   .experience-item:before {
     content: "";
@@ -166,13 +166,13 @@
   0% {
     top: 0; }
   100% {
-    top: 800px; } }
+    top: 1200px; } }
 
 @keyframes rocket-line {
   0% {
     height: 0; }
   100% {
-    height: 800px; } }
+    height: 1200px; } }
 
 .contant-margin {
   margin-bottom: 60px; }

@@ -472,12 +472,12 @@
 		new Chart(document.getElementById("bar-chart-horizontal"), {
         type: 'horizontalBar',
         data: {
-          labels: ["JavaScript", "Vue.js", "Node.js...", "Git flow", "mocha"],
+          labels: ["JavaScript", "Vue.js", "Node.js...", "Git flow", "mocha(test framework)", "Golang"],
           datasets: [
             {
               label: "熟悉程度",
-              backgroundColor: ["#f2e84c", "#00c984", "#43d214", "#000", "#956143"],
-              data: [60, 60, 50, 70, 60],
+              backgroundColor: ["#f2e84c", "#00c984", "#43d214", "#000", "#956143", "#6AD7E5"],
+              data: [50, 60, 40, 70, 60, 60],
             }
           ]
         },
@@ -495,20 +495,22 @@
                 label += '%';
 								switch(tooltipItem.index) {
 									case 0:
-										label = [label, "略懂 ES6，不過很多 Method 都沒記下來，某些情況下還是需要翻翻文件"]
+										label = [label, "在寫的時候還是需要翻翻文件，有些語言特性還不是掌握得很清楚"]
 										break;
 									case 1:
-										label = [label, "實習時用了不少，雖然實習的公司主打 RN，不過還是覺得 Vue 好玩"]
+										label = [label, "自學，只有些許的實務經驗"]
 										break;
 									case 2:
-										label = [label, "之前實習時，公司主要是使用 Sails，另外也因為些小專案的關係也玩過 Express"]
+										label = [label, "使用過 Sails，不過從頭開始可能有困難，在既有架構下修修改改的話沒問題"]
 										break;
 									case 3:
 										label = [label, "Git 還算熟，不過有些指令工作時不怎麼用到，比較不熟悉，比如 rebase 之類的"]
 										break;
 									case 4:
-										label = [label, "只用過 mocha，寫過的測試大概只有數百行而已，主要是比較複雜的邏輯才會寫，不過在實習時開發流程有時是 TDD，所也看過不少寫法跟spec"]
+										label = [label, "JS test framework, 在實習時學了一點"]
 										break;
+									case 5:
+										label = [label, "我只是略懂"]
 									default:
 										return label;
 								}
